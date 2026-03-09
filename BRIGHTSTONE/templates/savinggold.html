@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    {% include 'exten/setting.html' %}
+</head>
+
+<body>
+
+    {% include 'exten/navbar.html' %}
+
+    <div class="page-title">
+        Saving Gold
+    </div>
+
+    <h3>Add Saver</h3>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <input type="text" name="first_name" placeholder="ชื่อ">
+
+        <input type="text" name="last_name" placeholder="นามสกุล">
+
+        <input type="text" name="phone" placeholder="เบอร์">
+
+        <button type="submit">Add</button>
+
+    </form>
+
+    <hr>
+
+    <h3>รายชื่อผู้ที่ออมทอง</h3>
+
+    <table border="1">
+        <tr>
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+            <th>เบอร์</th>
+        </tr>
+
+        {% for s in savers %}
+        <tr>
+            <td>{{ s.first_name }}</td>
+            <td>{{ s.last_name }}</td>
+            <td>{{ s.phone }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>

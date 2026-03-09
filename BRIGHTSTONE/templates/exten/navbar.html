@@ -1,0 +1,78 @@
+{% load static %}
+<div class="navbar">
+
+    <div style="display:flex; align-items:center;">
+
+        <div class="logo">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.png' %}" alt="logo">
+            </div>
+
+            <div class="logo-text">
+                <h1>ห้างทองแสงทอง1</h1>
+                <span>iSTone System</span>
+            </div>
+        </div>
+
+        <div class="menu">
+
+            <a href="{% url 'home' %}" class="{% if active_menu == 'home' %}active{% endif %}">
+                Home
+            </a>
+
+            <a href="{% url 'supplier' %}" class="{% if active_menu == 'supplier' %}active{% endif %}">
+                Supplier
+            </a>
+
+            <a href="{% url 'stock' %}" class="{% if active_menu == 'stock' %}active{% endif %}">
+                Stock
+            </a>
+
+            <a href="{% url 'sale' %}" class="{% if active_menu == 'sale' %}active{% endif %}">
+                Sale
+            </a>
+
+            <a href="{% url 'savinggold' %}" class="{% if active_menu == 'savinggold' %}active{% endif %}">
+                Saving Gold
+            </a>
+
+            <a href="{% url 'report' %}" class="{% if active_menu == 'report' %}active{% endif %}">
+                Report
+            </a>
+
+            <a href="{% url 'setting' %}" class="{% if active_menu == 'setting' %}active{% endif %}">
+                Setting
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="gold-box">
+
+            <div class="gold-title">
+                ราคาทองคำ (บาท)
+            </div>
+
+            <div class="gold-price-row">
+                <div class="gold-buy">
+                    รับซื้อ
+                    <b id="gold-buy">-</b>
+                </div>
+
+                <div class="gold-sell">
+                    ขายออก
+                    <b id="gold-sell">-</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo-text">
+            <span id="world-clock"></span>
+        </div>
+
+    </div>
+
+</div>
