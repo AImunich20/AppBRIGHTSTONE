@@ -25,4 +25,4 @@ def savinggold_page(request):
 
     savers = Saver.objects.all()
 
-    return render(request, "savinggold.html", {"savers": savers})
+    return render(request, "savinggold.html", {"savers": savers, "active_menu": "savinggold"})

@@ -1,7 +1,9 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html',{
+        'active_menu':'home'
+    })
 
 def supplier(request):
     return render(request,'supplier.html',{
