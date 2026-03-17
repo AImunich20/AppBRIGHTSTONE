@@ -38,4 +38,12 @@ def setting(request):
         'active_menu':'setting'
     })
 
-    
+def search(request):
+    return render(request, 'savinggold/search.html', {
+        'active_menu': 'search'
+    }) 
+
+def saleexport(request):
+    return render(request, 'savinggold/saleexport.html', {
+        'active_menu': 'saleexport'
+    })

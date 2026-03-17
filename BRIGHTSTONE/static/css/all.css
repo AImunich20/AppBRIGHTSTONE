@@ -1,0 +1,281 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #e9dfcf;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #5b322c;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 25px;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box {
+    width: 60px;
+    height: 60px;
+    background: #d4af37;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-box img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 18px;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #e7cfa0;
+}
+
+/* ================= MENU ================= */
+.menu {
+    display: flex;
+    gap: 25px;
+    margin-left: 40px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    opacity: 0.8;
+}
+
+.menu a.active {
+    background: #d97f7f;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+/* ================= RIGHT PANEL ================= */
+.right-panel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gold-box {
+    background: #efe6c8;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: 1px solid #cbbf97;
+    color: #5b322c;
+    font-size: 14px;
+}
+
+.gold-box b {
+    color: #c99600;
+}
+
+.time {
+    color: #ffb3b3;
+    font-size: 14px;
+}
+
+/* ================= TITLE ================= */
+.page-title {
+    margin-top: 103px;
+    background: #e3d7c5;
+    border-top: 4px solid #c8a54b;
+    padding: 12px 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #c89b2c;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 120px);
+
+    background: #e3d7c5;
+    border-right: 1px solid #cbbf97;
+    padding: 15px 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+
+    background: #efe6c8;
+    color: #5b322c;
+
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.sidebar a:hover {
+    background: #c89b2c;
+    color: white;
+}
+
+.sidebar .active {
+    background: #c89b2c;
+    color: white;
+}
+
+/* ================= CONTENT ================= */
+.container {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* 🔥 GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* ================= FORM ================= */
+.box {
+    background: #fffbe9;
+    border: 1px solid #e3d7c5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #e3d7c5;
+}
+
+.form-title {
+    font-size: 18px;
+    color: #c89b2c;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #cbbf97;
+}
+
+button {
+    padding: 10px 18px;
+    background: #c89b2c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d4af37;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c89b2c;
+    margin-bottom: 15px;
+}
+
+/* ================= TABLE ================= */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.custom-table thead {
+    background: #c89b2c;
+    color: white;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.custom-table td {
+    border-bottom: 1px solid #eee;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background: #f9f5ec;
+}
+
+.custom-table tbody tr:hover {
+    background: #f1e4c6;
+}
+
+/* EMPTY */
+.empty {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .container {
+        margin-left: 190px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
